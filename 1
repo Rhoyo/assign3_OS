@@ -1,0 +1,154 @@
+PRE-SCRIPT INFO
+  Grading Script PID: 110509
+  Note: your smallsh will report a different PID when evaluating $$
+: BEGINNING TEST SCRIPT
+: 
+: --------------------
+: Using comment (5 points if only next prompt is displayed next)
+: : 
+: 
+: --------------------
+: ls (10 points for returning dir contents)
+: 1
+hor_program3.zip
+junk
+junk2
+no
+p3testscript
+README.txt
+smallsh
+smallsh.c
+: 
+: 
+: --------------------
+: ls out junk
+: : 
+: 
+: --------------------
+: cat junk (15 points for correctly returning contents of junk)
+: 1
+hor_program3.zip
+junk
+junk2
+no
+p3testscript
+README.txt
+smallsh
+smallsh.c
+: 
+: 
+: --------------------
+: wc in junk (15 points for returning correct numbers from wc)
+:  9  9 75
+: 
+: 
+: --------------------
+: wc in junk out junk2; cat junk2 (10 points for returning correct numbers from wc)
+: :  9  9 75
+: 
+: 
+: --------------------
+: test -f badfile (10 points for returning error value of 1, note extraneous &)
+: : exit value was 1
+: 
+: 
+: --------------------
+: wc in badfile (10 points for returning text error)
+: Failed to open input file badfile
+: 
+: 
+: --------------------
+: badfile (10 points for returning text error)
+: unknown command badfile cannot be executed
+: 
+: 
+: --------------------
+: sleep 100 background (10 points for returning process ID of sleeper)
+: Background PID is: 110641
+: 
+: 
+: --------------------
+: pkill -signal SIGTERM sleep (10 points for pid of killed process, 10 points for signal)
+: (Ignore message about Operation Not Permitted)
+: pkill: killing pid 17215 failed: Operation not permitted
+pkill: killing pid 22963 failed: Operation not permitted
+pkill: killing pid 42560 failed: Operation not permitted
+pkill: killing pid 45875 failed: Operation not permitted
+pkill: killing pid 101766 failed: Operation not permitted
+pkill: killing pid 101927 failed: Operation not permitted
+pkill: killing pid 102112 failed: Operation not permitted
+pkill: killing pid 102257 failed: Operation not permitted
+pkill: killing pid 102294 failed: Operation not permitted
+pkill: killing pid 102588 failed: Operation not permitted
+pkill: killing pid 103417 failed: Operation not permitted
+pkill: killing pid 103589 failed: Operation not permitted
+pkill: killing pid 104184 failed: Operation not permitted
+pkill: killing pid 104769 failed: Operation not permitted
+pkill: killing pid 105582 failed: Operation not permitted
+pkill: killing pid 105923 failed: Operation not permitted
+pkill: killing pid 106280 failed: Operation not permitted
+pkill: killing pid 107703 failed: Operation not permitted
+pkill: killing pid 107858 failed: Operation not permitted
+pkill: killing pid 107983 failed: Operation not permitted
+pkill: killing pid 108129 failed: Operation not permitted
+pkill: killing pid 108136 failed: Operation not permitted
+pkill: killing pid 108872 failed: Operation not permitted
+pkill: killing pid 108875 failed: Operation not permitted
+pkill: killing pid 109255 failed: Operation not permitted
+pkill: killing pid 109346 failed: Operation not permitted
+pkill: killing pid 110076 failed: Operation not permitted
+pkill: killing pid 110085 failed: Operation not permitted
+pkill: killing pid 110138 failed: Operation not permitted
+pkill: killing pid 110434 failed: Operation not permitted
+pkill: killing pid 110451 failed: Operation not permitted
+pkill: killing pid 110602 failed: Operation not permitted
+pkill: killing pid 206695 failed: Operation not permitted
+pkill: killing pid 218668 failed: Operation not permitted
+pkill: killing pid 238991 failed: Operation not permitted
+Background PID is: 110641
+terminating signal was 15
+: 
+: 
+: --------------------
+: sleep 1 background (10 pts for pid of bg ps when done, 10 for exit value)
+: Background PID is: 110672
+: : 
+Background PID is: 110672
+exit value was 0
+: 
+: --------------------
+: pwd
+: /nfs/stak/users/hor/cs344/assign3
+: 
+: 
+: --------------------
+: cd
+: : 
+: 
+: --------------------
+: pwd (10 points for being in the HOME dir)
+: /nfs/stak/users/hor
+: 
+: 
+: --------------------
+: mkdir testdir$$
+: mkdir: cannot create directory ‘testdir$$’: File exists
+: 
+: 
+: --------------------
+: cd testdir$$
+: : 
+: 
+: --------------------
+: pwd (5 points for being in the newly created dir)
+: /nfs/stak/users/hor/testdir$$
+: --------------------
+: Background PID is: 110721
+: kill: cannot find process "$$"
+Background PID is: 110721
+exit value was 0
+: Thu Nov  4 22:37:47 PDT 2021
+: Background PID is: 110726
+: Thu Nov  4 22:37:47 PDT 2021
+: kill: cannot find process "$$"
+: 
